@@ -2,10 +2,13 @@ FROM treemo/archlinux-with-yaourt
 
 
 # install pycharm
-RUN sudo pacman --noconfirm -S python2 python3 python2-pip python-pip libxrender git freetype2
-RUN yaourt -S --noconfirm pycharm-professional
- 
+RUN sudo pacman --noconfirm -S python2 python2-pip
+RUN sudo pacman --noconfirm -S python3 python-pip
+RUN sudo pacman --noconfirm -S git
+RUN sudo pacman --noconfirm -S libxrender freetype2 libxext libxtst
+RUN yaourt -S --noconfirm pycharm-eap
+
 
 # running
-ENTRYPOINT ["/usr/bin/pycharm"]
+ENTRYPOINT ["/opt/pycharm-eap/bin/pycharm.sh"]
 
