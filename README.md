@@ -7,5 +7,5 @@ docker run \
         -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
         -v $HOME/docker-data/pycharm:/home/user \
         --name pycharm \
-        jfmorneau/pycharm-professional
+        jfmorneau/pycharm
 ```
